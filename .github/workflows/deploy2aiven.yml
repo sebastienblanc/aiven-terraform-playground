@@ -3,13 +3,14 @@ run-name: sebiis learning GitHub Actions
 on: [push]
 jobs:
   terraform-deploy:
-    steps:
-    - uses: hashicorp/setup-terraform@v2
-    - run: terraform init
-    - id: plan
-      run: terraform plan -no-color
-    - id: apply
-      run: terraform apply
-      env:
-        AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"   
+    runs-on: ubuntu-latest
+      steps:
+      - uses: hashicorp/setup-terraform@v2
+      - run: terraform init
+      - id: plan
+        run: terraform plan -no-color
+      - id: apply
+        run: terraform apply
+        env:
+          AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"   
 
