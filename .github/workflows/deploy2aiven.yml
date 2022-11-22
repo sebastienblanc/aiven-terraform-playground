@@ -1,5 +1,5 @@
-name: learn-github-actions-and-terraform
-run-name: sebis learning GitHub Actions
+name: aiven-terraform-provider-demo
+run-name: Apply terraform config and create Aiven resources
 on: [push]
 jobs:
   terraform-deploy:
