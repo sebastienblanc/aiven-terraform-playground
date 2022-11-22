@@ -13,7 +13,7 @@ jobs:
         env:
           TF_VAR_aiven_api_token: "${{ secrets.AIVEN_TOKEN }}"
       - id: apply
-        run: terraform apply
+        run: terraform apply -auto-approve -input=false
         env:
           TF_VAR_aiven_api_token: "${{ secrets.AIVEN_TOKEN }}"   
 
