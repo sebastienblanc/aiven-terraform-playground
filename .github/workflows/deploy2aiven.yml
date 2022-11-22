@@ -6,4 +6,6 @@ steps:
 - id: plan
   run: terraform plan -no-color
 - id: apply
-  run: terraform apply   
+  run: terraform apply
+  env:
+    AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"   
