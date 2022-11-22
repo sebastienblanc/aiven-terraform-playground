@@ -1,11 +1,15 @@
-steps:
-- uses: hashicorp/setup-terraform@v2
+name: learn-github-actions-and-terraform
+run-name: sebiis learning GitHub Actions
+on: [push]
+jobs:
+  terraform-deploy:
+    steps:
+    - uses: hashicorp/setup-terraform@v2
+    - run: terraform init
+    - id: plan
+      run: terraform plan -no-color
+    - id: apply
+      run: terraform apply
+      env:
+        AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"   
 
-- run: terraform init
-
-- id: plan
-  run: terraform plan -no-color
-- id: apply
-  run: terraform apply
-  env:
-    AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"   
