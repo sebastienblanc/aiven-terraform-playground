@@ -1,5 +1,5 @@
 name: learn-github-actions-and-terraform
-run-name: sebiis learning GitHub Actions
+run-name: sebis learning GitHub Actions
 on: [push]
 jobs:
   terraform-deploy:
@@ -11,9 +11,9 @@ jobs:
       - id: plan
         run: terraform plan -no-color
         env:
-          AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"
+          TF_VAR_aiven_api_token: "${{ secrets.AIVEN_TOKEN }}"
       - id: apply
         run: terraform apply
         env:
-          AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"   
+          TF_VAR_aiven_api_token: "${{ secrets.AIVEN_TOKEN }}"   
 
