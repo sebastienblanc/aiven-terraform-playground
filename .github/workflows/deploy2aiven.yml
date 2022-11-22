@@ -10,6 +10,8 @@ jobs:
       - run: terraform init
       - id: plan
         run: terraform plan -no-color
+        env:
+          AIVEN_TOKEN: "${{ secrets.AIVEN_TOKEN }}"
       - id: apply
         run: terraform apply
         env:
