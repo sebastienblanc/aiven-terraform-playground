@@ -6,7 +6,7 @@ This repo demonstrate how to use Github Actions to apply Terraform configuration
 
 Be sure to have an Aiven auth token ready, go to your github settings -> Secrets -> Actions , and a new secret named `AIVEN_TOKEN`.
 
-![](secre-action.png)
+![](secret-action.png)
 
 ## Push to test
 
