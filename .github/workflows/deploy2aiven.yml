@@ -1,6 +1,8 @@
 name: aiven-terraform-provider-demo
 run-name: Apply terraform config and create Aiven resources
 on: [push]
+env:
+  TF_VAR_aiven_api_token: "${{ secrets.AIVEN_TOKEN }}"
 jobs:
   terraform-deploy:
     runs-on: ubuntu-latest
@@ -8,6 +10,5 @@ jobs:
     - uses: sturlabragason/terraform_state_artifact@v2
       with:
           encryptionkey: ${{ secrets.encryptionkey }}
-          env:
-            TF_VAR_aiven_api_token: "${{ secrets.AIVEN_TOKEN }}"
+          
     
