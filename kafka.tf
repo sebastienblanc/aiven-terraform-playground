@@ -26,10 +26,3 @@ resource "aiven_kafka_topic" "topic-customer-activity" {
   replication  = 2
 }
 
-resource "aiven_kafka_topic" "topic-customer-payments" {
-  project      = "dev-sandbox"
-  service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
-  topic_name   = "customer-activity-payments"
-  partitions   = 3
-  replication  = 2
-}
