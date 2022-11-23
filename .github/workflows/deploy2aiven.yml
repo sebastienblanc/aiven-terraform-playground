@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: sturlabragason/terraform_state_artifact@v2
-        with:
+      with:
           encryptionkey: ${{ secrets.encryptionkey }}
           env:
             TF_VAR_aiven_api_token: "${{ secrets.AIVEN_TOKEN }}"
