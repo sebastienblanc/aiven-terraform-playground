@@ -1,6 +1,6 @@
 # Kafka service
 resource "aiven_kafka" "sblanc-kafka-terraform-test" {
-  project                 = "dev-sanbox"
+  project                 = "dev-sandbox"
   cloud_name              = "google-northamerica-northeast1"
   plan                    = "business-4"
   service_name            = "sblanc-kafka-terraform-test"
@@ -19,7 +19,7 @@ resource "aiven_kafka" "sblanc-kafka-terraform-test" {
 
 # Kafka topic
 resource "aiven_kafka_topic" "topic-customer-activity" {
-  project      = "dev-sanbox"
+  project      = "dev-sandbox"
   service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
   topic_name   = "customer-activity"
   partitions   = 3
