@@ -7,8 +7,8 @@ jobs:
   terraform-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: sturlabragason/terraform_state_artifact@v2
+    - uses: sturlabragason/terraform_state_artifact@v1
       with:
-          encryptionkey: ${{ secrets.encryptionkey }}
+        encryptionkey: ${{ secrets.encryptionkey }}
           
     
