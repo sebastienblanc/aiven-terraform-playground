@@ -15,10 +15,10 @@ Push a new terraform configuration file or update the existing one and you shoul
 For instance, you can try to add a new Kafka Topic in `kafka.tf` like : 
 
 ```
-resource "aiven_kafka_topic" "topic-other-topic" {
+resource "aiven_kafka_topic" "topic-an-other-topic" {
   project      = "dev-sandbox"
   service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
-  topic_name   = "other-topic"
+  topic_name   = "an-other-topic"
   partitions   = 3
   replication  = 2
 }
