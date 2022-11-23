@@ -25,3 +25,11 @@ resource "aiven_kafka_topic" "topic-customer-activity" {
   partitions   = 3
   replication  = 2
 }
+
+resource "aiven_kafka_topic" "topic-other-activity" {
+  project      = "dev-sandbox"
+  service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
+  topic_name   = "other-activity"
+  partitions   = 3
+  replication  = 2
+}
