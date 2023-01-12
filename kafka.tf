@@ -26,7 +26,7 @@ resource "aiven_kafka_topic" "topic-customer-activity" {
   replication  = 2
 }
 
-resource "aiven_kafka_topic" "topic-customer-activity" {
+resource "aiven_kafka_topic" "topic-letstalk-aiven-tech-activity" {
   project      = "dev-sandbox"
   service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
   topic_name   = "letstalk-aiven-tech-activity"
