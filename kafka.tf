@@ -34,3 +34,11 @@ resource "aiven_kafka_topic" "topic-letstalk-aiven-tech-activity" {
   replication  = 2
 }
 
+resource "aiven_kafka_topic" "topic-letstalk1-aiven-tech-activity" {
+  project      = "dev-sandbox"
+  service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
+  topic_name   = "letstalk1-aiven-tech-activity"
+  partitions   = 3
+  replication  = 2
+}
+
