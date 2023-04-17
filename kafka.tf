@@ -25,6 +25,14 @@ resource "aiven_kafka_topic" "topic-customer-topic" {
   replication  = 2
 }
 
+resource "aiven_kafka_topic" "topic-live-coding" {
+  project      = "devrel-sebastien"
+  service_name = aiven_kafka.sblanc-kafka-terraform-gh.service_name
+  topic_name   = "live-coding"
+  partitions   = 3
+  replication  = 2
+}
+
 
 
 
