@@ -3,7 +3,7 @@ resource "aiven_kafka" "sblanc-kafka-terraform-gh" {
   project                 = "devrel-sebastien"
   cloud_name              = "google-northamerica-northeast1"
   plan                    = "business-4"
-  service_name            = "sblanc-kafka-terraform-test"
+  service_name            = "sblanc-kafka-terraform-gh"
   maintenance_window_dow  = "monday"
   maintenance_window_time = "10:00:00"
   kafka_user_config {
@@ -19,8 +19,8 @@ resource "aiven_kafka" "sblanc-kafka-terraform-gh" {
 
 # Kafka topic
 resource "aiven_kafka_topic" "topic-customer-activity" {
-  project      = "dev-sandbox"
-  service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
+  project      = "devrel-sebastien"
+  service_name = aiven_kafka.sblanc-kafka-terraform-gh.service_name
   topic_name   = "customer-activity"
   partitions   = 3
   replication  = 2
