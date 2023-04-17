@@ -1,5 +1,5 @@
 # Kafka service
-resource "aiven_kafka" "sblanc-kafka-terraform-test" {
+resource "aiven_kafka" "sblanc-kafka-terraform-gh" {
   project                 = "devrel-sebastien"
   cloud_name              = "google-northamerica-northeast1"
   plan                    = "business-4"
