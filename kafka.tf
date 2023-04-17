@@ -1,6 +1,6 @@
 # Kafka service
 resource "aiven_kafka" "sblanc-kafka-terraform-test" {
-  project                 = "dev-sandbox"
+  project                 = "devrel-sebastien"
   cloud_name              = "google-northamerica-northeast1"
   plan                    = "business-4"
   service_name            = "sblanc-kafka-terraform-test"
@@ -26,19 +26,6 @@ resource "aiven_kafka_topic" "topic-customer-activity" {
   replication  = 2
 }
 
-resource "aiven_kafka_topic" "topic-letstalk-aiven-tech-activity" {
-  project      = "dev-sandbox"
-  service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
-  topic_name   = "letstalk-aiven-tech-activity"
-  partitions   = 3
-  replication  = 2
-}
 
-resource "aiven_kafka_topic" "topic-letstalk1-aiven-tech-activity" {
-  project      = "dev-sandbox"
-  service_name = aiven_kafka.sblanc-kafka-terraform-test.service_name
-  topic_name   = "letstalk1-aiven-tech-activity"
-  partitions   = 3
-  replication  = 2
-}
+
 
