@@ -3,7 +3,7 @@ resource "aiven_kafka" "sblanc-kafka-terraform-gh" {
   project                 = "devrel-sebastien"
   cloud_name              = "google-northamerica-northeast1"
   plan                    = "business-4"
-  service_name            = "sblanc-kafka-terraform-gh"
+  service_name            = "sebi-november"
   maintenance_window_dow  = "monday"
   maintenance_window_time = "10:00:00"
   kafka_user_config {
