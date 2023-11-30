@@ -33,7 +33,7 @@ resource "aiven_kafka_topic" "topic-live-coding" {
   replication  = 2
 }
 
-resource "aiven_kafka_topic" "topic-live-coding" {
+resource "aiven_kafka_topic" "topic-live-now-itwillwork" {
   project      = "devrel-sebastien"
   service_name = aiven_kafka.sblanc-kafka-terraform-gh.service_name
   topic_name   = "live-for-decathlon"
