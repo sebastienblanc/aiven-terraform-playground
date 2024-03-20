@@ -20,7 +20,7 @@ resource "aiven_kafka" "sblanc-kafka-terraform-gh" {
 resource "aiven_kafka_topic" "topic-customer-topic" {
   project      = "devrel-sebastien"
   service_name = aiven_kafka.sblanc-kafka-terraform-gh.service_name
-  topic_name   = "customer-topic"
+  topic_name   = "customer-kafka-topic"
   partitions   = 3
   replication  = 2
 }
